@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>bootstrap学习</title>
+
+  <!-- 需要引入三个文件：
+       bootstrap有国内cdn，可以不下载本地文件
+       1、引入bootstrap核心CSS文件
+       2、引入jQuery文件，必须在bootstrap.min.js文件前引入
+       3、引入bootstrap核心JS文件 -->
+
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- 引入 jQuery ，必须在 bootstrap.min.js 前面引入 -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <!-- 图标库 -->
+  <!--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+  <style>
+    /*栅格设置边框*/
+    .myrow {
+      background-color: beige;
+      border: solid black 1px;
+    }
+    /*图标可以像字体一样设置大小*/
+    .glyphicon-envelope{
+      font-size: 100px;
+      color:coral;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 测试是否导入成功 -->
+  <button class="btn btn-info">hello world</button>
+
+  <!-- 1、p的样式 -->
+  <p>
+    <!-- p中可以用其他样式对文字格式进行设置 -->
+    <i>新加坡环球影城坐落于全球投资额最高</i>、<strong>内容最丰富的顶级家庭旅游目的地圣淘沙名胜世界之内</strong>，<small>其将推出24个过山车</small>和景点，大部分景点为世界级的首创亮点或是特地为新加坡量身定造的，堪称环球影城的又一鸿篇巨制。环球影城24个景点和双轨过山车等项目中，有18个专为新加坡设计，全球独有的游乐项目，包括科幻影集太空堡垒(Battlestar
+    Galactica)为蓝本，高度达42.5米的双轨过山车；以及拥有3500个观众席、全球最多座位的未来水世界剧场等。新加坡环球影城拥有古埃及、失落的世界和好莱坞大道等七个主题区，让电影世界的神奇，为游客掀开探险旅程的序幕。斗恶霸、追明星，游客将随着不同电影的剧情，从一个荧幕转移到另一个，沉浸在星光大道的耀眼光芒中。在新加坡环球影城，游客们将被独有的娱乐体验深深吸引，并且惊叹不已。
+  </p>
+  <!-- 对p设置一些class，就会有一些预定义的样式 -->
+  <p class="text-center">新加坡环球影城center</p>
+  <p class="ltext-eft">新加坡环球影城left</p>
+  <p class="text-right">新加坡环球影城right</p>
+
+  <!-- 2、表格的样式 -->
+  <table class="table table-striped table-bordered table-hover">
+    <tr>
+      <th>星期一</th>
+      <th>星期二</th>
+      <th>星期三</th>
+      <th>星期四</th>
+    </tr>
+    <tr class="warning">
+      <td>语文</td>
+      <td>数学</td>
+      <td>英语</td>
+      <td>英语</td>
+    </tr>
+    <tr class="hover">
+      <td>英语</td>
+      <td>英语</td>
+      <td>物理</td>
+      <td>数学</td>
+    </tr>
+    <tr class="danger">
+      <td>语文</td>
+      <td>英语</td>
+      <td>英语</td>
+      <td>物理</td>
+    </tr>
+    <tr>
+      <td>语文</td>
+      <td>英语</td>
+      <td>英语</td>
+      <td>物理</td>
+    </tr>
+    <tr>
+      <td>美术</td>
+      <td>体育</td>
+      <td>班会</td>
+      <td>音乐</td>
+    </tr>
+  </table>
+
+  <!-- 3、按钮的样式 -->
+  <button class="btn btn-default">一个按钮default</button> <!-- 默认 -->
+  <button class="btn btn-success">一个按钮success</button>
+  <button class="btn btn-primary">一个按钮primary</button>
+  <button class="btn btn-info disable">一个按钮info,已禁用</button>
+  <button class="btn btn-warning">一个按钮warning</button>
+  <button class="btn btn-danger">一个按钮danger</button>
+  <a href="#" class="btn btn-default">a也可以变成按钮</a>
+
+  <!-- 3、栅格 -->
+  <!-- 把屏幕一共分成12等份 -->
+  <div class="row">
+    <div class="col-md-1 myrow">col1</div>
+    <div class="col-md-1 myrow">col2</div>
+    <div class="col-md-1 myrow">col3</div>
+    <div class="col-md-1 myrow">col4</div>
+    <div class="col-md-1 myrow">col5</div>
+    <div class="col-md-1 myrow">col6</div>
+    <div class="col-md-1 myrow">col7</div>
+    <div class="col-md-1 myrow">col8</div>
+    <div class="col-md-1 myrow">col9</div>
+    <div class="col-md-1 myrow">col10</div>
+    <div class="col-md-1 myrow">col11</div>
+    <div class="col-md-1 myrow">col12</div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 myrow">col1</div>
+    <div class="col-md-4 myrow">col2</div>
+  </div>
+
+  <!-- 4、图标：图片太大，用文字代替图片，通过设置字体大小，来控制图标大小 -->
+  <!-- bootstrap中支持glyphicon -->
+  <!-- 通过.类名改变大小和颜色 -->
+  <span class="glyphicon glyphicon-asterisk"></span><br>
+  <span class="glyphicon glyphicon-envelope"></span><br>
+  <!-- 字体图标按钮 -->
+  <button class="btn btn-default">
+    <span class="glyphicon glyphicon-star"></span>
+    这是一个字体图标按钮
+  </button>
+
+  <!-- 5、下拉组件 -->
+  <div class="dropdown">
+    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+      这是一个按钮
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li>first</li>
+      <li>second</li>
+      <li>third</li>
+    </ul>
+  </div>
+
+  <!-- 控件组 -->
+</body>
+
+</html>
